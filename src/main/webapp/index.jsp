@@ -1,116 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishu ❤️ Dnyanesh</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dnyanesh ❤️ Vaishu</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-        body{
-            background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
+body{
+    background:linear-gradient(135deg,#ff6b81,#ff9ff3,#feca57);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
 
-        .card{
-            width:450px;
-            background:#fff;
-            padding:30px;
-            border-radius:15px;
-            text-align:center;
-            box-shadow:0 10px 25px rgba(0,0,0,0.3);
-        }
+.card{
+    width:90%;
+    max-width:800px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
 
-        h1{
-            color:#e91e63;
-            margin-bottom:15px;
-        }
+h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
 
-        h2{
-            color:#444;
-            margin-bottom:20px;
-        }
+h2{
+    font-size:32px;
+    margin-bottom:25px;
+}
 
-        p{
-            color:#666;
-            font-size:18px;
-            line-height:1.6;
-        }
+p{
+    font-size:20px;
+    line-height:1.8;
+}
 
-        .heart{
-            font-size:80px;
-            color:red;
-            animation:beat 1s infinite;
-            margin:20px 0;
-        }
+.heart{
+    font-size:90px;
+    animation:beat 1s infinite;
+    margin:20px 0;
+}
 
-        @keyframes beat{
-            0%{transform:scale(1);}
-            50%{transform:scale(1.2);}
-            100%{transform:scale(1);}
-        }
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.25);}
+    100%{transform:scale(1);}
+}
 
-        .footer{
-            margin-top:20px;
-            color:#888;
-            font-size:14px;
-        }
+button{
+    margin-top:35px;
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    background:white;
+    color:#e91e63;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
 
-        button{
-            margin-top:20px;
-            padding:10px 20px;
-            border:none;
-            border-radius:25px;
-            background:#e91e63;
-            color:white;
-            cursor:pointer;
-            font-size:16px;
-        }
+button:hover{
+    transform:scale(1.08);
+    background:#ffe4ec;
+}
 
-        button:hover{
-            background:#c2185b;
-        }
-    </style>
+#message{
+    margin-top:30px;
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
+}
+
+/* Floating Hearts */
+
+.hearts span{
+    position:absolute;
+    bottom:-50px;
+    color:white;
+    font-size:25px;
+    animation:float 10s linear infinite;
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:25%;animation-delay:2s;}
+.hearts span:nth-child(3){left:45%;animation-delay:4s;}
+.hearts span:nth-child(4){left:65%;animation-delay:1s;}
+.hearts span:nth-child(5){left:80%;animation-delay:3s;}
+.hearts span:nth-child(6){left:92%;animation-delay:5s;}
+
+@keyframes float{
+    from{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh) scale(1.8);
+        opacity:0;
+    }
+}
+</style>
+
 </head>
 <body>
 
+<div class="hearts">
+<span>❤️</span>
+<span>💕</span>
+<span>💖</span>
+<span>💗</span>
+<span>💘</span>
+<span>❤️</span>
+</div>
+
 <div class="card">
-    <h1>❤️ Vaishu & Dnyanesh ❤️</h1>
 
-    <div class="heart">❤</div>
+<h1>❤️ Dnyanesh ❤️</h1>
 
-    <h2>Forever Together</h2>
+<h2>Forever with Vaishu ❤️</h2>
 
-    <p>
-        Every love story is beautiful,
-        but ours is my favorite.
-        <br><br>
-        Wishing a lifetime filled with
-        happiness, trust, laughter,
-        and endless love.
-    </p>
+<div class="heart">💖</div>
 
-    <button onclick="showMessage()">
-        Click Me ❤️
-    </button>
+<p>
+Every love story is beautiful,<br>
+but ours is my favorite.<br><br>
 
-    <div class="footer">
-        Made with ❤️ for Vaishu & Dnyanesh
-    </div>
+No matter where life takes us,<br>
+my heart will always choose you.<br><br>
+
+<b>Dnyanesh ❤️ Vaishu</b><br>
+Forever • Always • Together
+</p>
+
+<button onclick="loveMessage()">
+Click Here ❤️
+</button>
+
+<div id="message"></div>
+
 </div>
 
 <script>
-function showMessage(){
-    alert("❤️ Vaishu & Dnyanesh ❤️\n\nTogether Forever! 💖");
+function loveMessage(){
+document.getElementById("message").innerHTML =
+"💖 I Love You Vaishu 💖<br><br>Every heartbeat of Dnyanesh belongs to you ❤️";
 }
 </script>
 
